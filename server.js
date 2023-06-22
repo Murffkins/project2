@@ -10,7 +10,8 @@ app
   .use(cors())
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
-  .use('/', require('./routes'));
+  .use('/', require('./routes/game'))
+  .use('/', require('./routes/user'));
 
 const db = require('./models/server');
 db.mongoose
