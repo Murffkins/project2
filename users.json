@@ -1,0 +1,43 @@
+[{
+    "user_id": 1,
+    "additionalInfo": false,
+    "username": "dxmux",
+    "password": "Asdf1234",
+    "email": "dxmux@gmail.com",
+    "loggedhours": ""
+  },{
+    "user_id": 2,
+    "additionalInfo": false,
+    "username": "nxmux",
+    "password": "qwer5678",
+    "email": "nxmux@gmail.com",
+    "loggedhours": ""
+  },{
+    "user_id": 3,
+    "additionalInfo": false,
+    "username": "bxmux",
+    "password": "zxcv9101112",
+    "email": "bxmux@gmail.com",
+    "loggedhours": ""
+  },{
+    "user_id": 4,
+    "additionalInfo": false,
+    "username": "rxmux",
+    "password": "ghjk13141516",
+    "email": "rxmux@gmail.com",
+    "loggedhours": ""
+  },{
+    "user_id": 5,
+    "additionalInfo": false,
+    "username": "txmux",
+    "password": "tyui17181920",
+    "email": "txmux@gmail.com",
+    "loggedhours": ""
+  },{
+    "user_id": 6,
+    "additionalInfo": false,
+    "username": "jxmux",
+    "password": "bnm,21222324",
+    "email": "jxmux@gmail.com",
+    "loggedhours": ""
+  }]

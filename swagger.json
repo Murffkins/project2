@@ -22,11 +22,7 @@
       "get": {
         "description": "",
         "parameters": [
-          {
-            "name": "apiKey",
-            "in": "header",
-            "type": "string"
-          }
+         
         ],
         "responses": {
           "200": {
@@ -84,11 +80,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "apiKey",
-            "in": "header",
-            "type": "string"
           }
         ],
         "responses": {
@@ -108,11 +99,7 @@
       "get": {
         "description": "",
         "parameters": [
-          {
-            "name": "apiKey",
-            "in": "header",
-            "type": "string"
-          }
+          
         ],
         "responses": {
           "200": {
@@ -172,11 +159,6 @@
             "name": "user_id",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "apiKey",
-            "in": "header",
             "type": "string"
           }
         ],

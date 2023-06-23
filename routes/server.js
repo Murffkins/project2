@@ -1,6 +1,8 @@
 const routes = require('express').Router();
-const game = require('./game');
-const user = require('./user');
+const game = require('./game.js');
+const user = require('./user.js');
+// console.log erase
+console.log("server.js here");
 
 routes.use('/', require('./swagger'));
 routes.use('/games', game);

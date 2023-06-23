@@ -1,14 +1,16 @@
 const routes = require('express').Router();
 const users = require('../controllers/user.js');
+// console.log erase
+console.log("user.js here");
 
 // Retrieve all published Users
-routes.get('/', users.findAll);
+routes.get('/users', users.findAll);
 
 // Retrieve a single User with id
-routes.get('/:user_id', users.findOne);
+routes.get('/users/:user_id', users.findOne);
 
 // Create a new User
-routes.post('/', users.create);
+routes.post('/users', users.create);
 
 // Update a User with id
 // routes.put('/:id', users.update);
