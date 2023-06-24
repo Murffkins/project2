@@ -13,6 +13,11 @@ app
   .use('/', require('./routes/game'))
   .use('/', require('./routes/user'));
 
+// Added Errorhandling for L06 -- logs to a file so you can see what the errors (if any) are
+process.on('uncaughtException', (err, origin) => {
+  console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);  
+});  
+
 const db = require('./models/server');
 db.mongoose
   .connect(db.url, {

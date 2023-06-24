@@ -72,80 +72,80 @@ exports.findOne = (req, res) => {
       });
 };
 
-// // Update a Game by the id in the request
-// exports.update = (req, res) => {
-//   if (!req.body) {
-//     return res.status(400).send({
-//       message: 'Data to update can not be empty!',
-//     });
-//   }
+// Update a Game by the id in the request
+exports.update = (req, res) => {
+  if (!req.body) {
+    return res.status(400).send({
+      message: 'Data to update can not be empty!',
+    });
+  }
 
-//   const id = req.params.id;
+  const id = req.params.id;
 
-//   Game.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
-//     .then((data) => {
-//       if (!data) {
-//         res.status(404).send({
-//           message: `Cannot update Game with id=${id}. Maybe Game was not found!`,
-//         });
-//       } else res.send({ message: 'Game was updated successfully.' });
-//     })
-//     .catch((err) => {
-//       res.status(500).send({
-//         message: 'Error updating Game with id=' + id,
-//       });
-//     });
-// };
+  Game.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot update Game with id=${id}. Maybe Game was not found!`,
+        });
+      } else res.send({ message: 'Game was updated successfully.' });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: 'Error updating Game with id=' + id,
+      });
+    });
+};
 
-// // Delete a Game with the specified id in the request
-// exports.delete = (req, res) => {
-//   const id = req.params.id;
+// Delete a Game with the specified id in the request
+exports.delete = (req, res) => {
+  const id = req.params.id;
 
-//   Game.findByIdAndRemove(id)
-//     .then((data) => {
-//       if (!data) {
-//         res.status(404).send({
-//           message: `Cannot delete Game with id=${id}. Maybe Game was not found!`,
-//         });
-//       } else {
-//         res.send({
-//           message: 'Game was deleted successfully!',
-//         });
-//       }
-//     })
-//     .catch((err) => {
-//       res.status(500).send({
-//         message: 'Could not delete Game with id=' + id,
-//       });
-//     });
-// };
+  Game.findByIdAndRemove(id)
+    .then((data) => {
+      if (!data) {
+        res.status(404).send({
+          message: `Cannot delete Game with id=${id}. Maybe Game was not found!`,
+        });
+      } else {
+        res.send({
+          message: 'Game was deleted successfully!',
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message: 'Could not delete Game with id=' + id,
+      });
+    });
+};
 
-// // Delete all Games from the database.
-// exports.deleteAll = (req, res) => {
-//   Game.deleteMany({})
-//     .then((data) => {
-//       res.send({
-//         message: `${data.deletedCount} Games were deleted successfully!`,
-//       });
-//     })
-//     .catch((err) => {
-//       res.status(500).send({
-//         message:
-//           err.message || 'Some error occurred while removing all games.',
-//       });
-//     });
-// };
+// Delete all Games from the database.
+exports.deleteAll = (req, res) => {
+  Game.deleteMany({})
+    .then((data) => {
+      res.send({
+        message: `${data.deletedCount} Games were deleted successfully!`,
+      });
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message:
+          err.message || 'Some error occurred while removing all games.',
+      });
+    });
+};
 
-// // Find all published Games
-// exports.findAllPublished = (req, res) => {
-//   Game.find({ published: true })
-//     .then((data) => {
-//       res.send(data);
-//     })
-//     .catch((err) => {
-//       res.status(500).send({
-//         message:
-//           err.message || 'Some error occurred while retrieving game.',
-//       });
-//     });
-// };
+// Find all published Games
+exports.findAllPublished = (req, res) => {
+  Game.find({ published: true })
+    .then((data) => {
+      res.send(data);
+    })
+    .catch((err) => {
+      res.status(500).send({
+        message:
+          err.message || 'Some error occurred while retrieving game.',
+      });
+    });
+};
