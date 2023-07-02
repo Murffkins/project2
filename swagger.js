@@ -5,8 +5,8 @@ const doc = {
     title: 'My API',
     description: 'Game API',
   },
-  host: 'localhost:8080',
-  schemes: ['http'],
+  host: 'https://cse341-project2-tv5z.onrender.com',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
