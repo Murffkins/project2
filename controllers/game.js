@@ -9,9 +9,9 @@ const getAllGames = async (req, res, next) => {
   try {
       const result = await mongodb.getDb().db().collection('games').find();
       result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists); 
-  });
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(lists); 
+      });
   } catch (error) {
       console.log(error);
   }
@@ -24,8 +24,8 @@ const getSingleGame = async (req, res, next) => {
       const userId = new ObjectId(req.params.id);
       const result = await mongodb.getDb().db().collection('games').find({_id: userId});
       result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists[0]);
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(lists[0]);
       });
   } catch (error) {
       console.log(error);
