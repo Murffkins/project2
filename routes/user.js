@@ -10,16 +10,16 @@ const validation = require('../middleware/validate');
 routes.get('/users', usersController.getAllUsers);
 
 // Retrieve a single User with id
-routes.get('/users/:user_id', usersController.getSingleUser);
+routes.get('/users/:id', usersController.getSingleUser);
 
 // Create a new User
 routes.post('/users', validation.saveUser, usersController.createUser);
 
 // Update a User with id
-routes.put('/:id', validation.saveUser, usersController.updateUser);
+routes.put('/users/:id', validation.saveUser, usersController.updateUser);
 
 // Delete a User with id
-routes.delete('/:id', usersController.deleteUser);
+routes.delete('/users/:id', usersController.deleteUser);
 
 // Erase
 // // Delete all Users
