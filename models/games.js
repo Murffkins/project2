@@ -34,13 +34,13 @@
 
 
 
-// Create the model
-// Model named Product
-const Game = mongoose.model('Game', gameSchema);
+// // Create the model
+// // Model named Product
+// const Game = mongoose.model('Game', gameSchema);
 
 
-// Export the module
-module.exports = Game;
+// // Export the module
+// module.exports = Game;
 
 
 

@@ -35,13 +35,13 @@
 
 
 
-// Create the model
-// Model named Product
-const User = mongoose.model('User', userSchema);
+// // Create the model
+// // Model named Product
+// const User = mongoose.model('User', userSchema);
 
 
-// Export the module
-module.exports = User;
+// // Export the module
+// module.exports = User;
 
 
 
