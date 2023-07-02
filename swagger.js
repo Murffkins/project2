@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Game API',
   },
-  host: 'localhost:8080',
+  host: 'cse341-project2-tv5z.onrender.com',
   schemes: ['http'],
 };
 
