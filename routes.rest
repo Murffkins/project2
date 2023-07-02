@@ -1,0 +1,53 @@
+// LOCALHOST
+###
+GET http://localhost:8080/contacts
+###
+GET http://localhost:8080/contacts/6489746e4860f987a92340e6
+###
+GET http://localhost:8080/contacts/648974784860f987a92340e7
+###
+GET http://localhost:8080/contacts/6489747c4860f987a92340e8
+###
+GET http://localhost:8080/contacts/648a9dfbbce6e94352dfad4b
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Tyler",
+    "lastName": "Murff",
+    "email": "perkins_n@hotmail.com",
+    "favoriteColor": "Green",
+    "birthday": "06/14/2011"
+}
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Nicole",
+    "lastName": "Murff",
+    "email": "perkins_n@hotmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "10/02/1983"
+}
+
+### PUT/update contact
+PUT http://localhost:8080/contacts/6489746e4860f987a92340e6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Daniel",
+    "lastName": "Murff",
+    "email": "perkins_n@hotmail.com",
+    "favoriteColor": "Black",
+    "birthday": "07/29/1985"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/id HTTP/1.1
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/id HTTP/1.1
