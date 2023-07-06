@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
 
 // Check to see if someone is logged in
 app.get('/profile', requiresAuth(), (req, res) => {
-  res.send(json.stringify(req.oidc.user));
+  res.send(JSON.stringify(req.oidc.user));
 })
 
 app.use('/', require('./routes'));
