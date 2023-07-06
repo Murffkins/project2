@@ -18,7 +18,7 @@
         "responses": {}
       }
     },
-    "/games": {
+    "/games/games": {
       "get": {
         "description": "",
         "produces": [
@@ -69,7 +69,7 @@
         }
       }
     },
-    "/games/{id}": {
+    "/games/games/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -158,7 +158,7 @@
         }
       }
     },
-    "/users": {
+    "/users/users": {
       "get": {
         "description": "",
         "produces": [
@@ -209,7 +209,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/users/users/{id}": {
       "get": {
         "description": "",
         "produces": [
