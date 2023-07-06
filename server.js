@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 // app.use('/index', indexRoutes); Do I need this? Erase
    // localhost:3000/index
 
-app.use('/', require('./routes'));
+
 // app.use('/', require('./routes/user'));
 // localhost:8080/
 
@@ -74,6 +74,8 @@ app.get('/', (req, res) => {
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(json.stringify(req.oidc.user));
 })
+
+app.use('/', require('./routes'));
 
 
 
