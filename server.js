@@ -31,8 +31,8 @@ app.use((req, res, next) => {
 // app.use('/index', indexRoutes); Do I need this? Erase
    // localhost:3000/index
 
-app.use('/', require('./routes/game'));
-app.use('/', require('./routes/user'));
+app.use('/', require('./routes/server'));
+// app.use('/', require('./routes/user'));
 // localhost:8080/
 
 // Added Errorhandling for L06 -- logs to a file so you can see what the errors (if any) are
