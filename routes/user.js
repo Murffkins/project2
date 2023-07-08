@@ -1,7 +1,6 @@
 const routes = require('express').Router();
 const usersController = require('../controllers/user.js');
-// console.log erase
-console.log("user.js here");
+
 
 // Added validation for L06
 const validation = require('../middleware/validate');
@@ -21,8 +20,5 @@ routes.put('/users/:id', validation.saveUser, usersController.updateUser);
 // Delete a User with id
 routes.delete('/users/:id', usersController.deleteUser);
 
-// Erase
-// // Delete all Users
-// routes.delete('/', usersController.deleteAll);
 
 module.exports = routes;

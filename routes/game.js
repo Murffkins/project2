@@ -1,7 +1,6 @@
 const routes = require('express').Router();
 const gamesController = require('../controllers/game.js');
-// console.log erase
-console.log("game.js here");
+
 
 // Added validation for L06
 const validation = require('../middleware/validate');
@@ -22,8 +21,5 @@ routes.put('/games/:id', validation.saveGame, gamesController.updateGame);
 // Delete a Game with id
 routes.delete('/games/:id', gamesController.deleteGame);
 
-// Erase
-// // Delete all Games
-// routes.delete('/', gamesController.deleteAll);
 
 module.exports = routes;
